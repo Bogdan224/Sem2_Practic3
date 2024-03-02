@@ -34,7 +34,7 @@ bool Equals(TV* tv1, TV* tv2)
 }
 bool Less(TV* tv1, TV* tv2)
 {
-	if (tv1->_displaySize < tv2->_displaySize) {
+	if (tv1->_displaySize*(tv1->_haveWIFI+1) < tv2->_displaySize*(tv2->_haveWIFI + 1)) {
 		return true;
 	}
 	else {
