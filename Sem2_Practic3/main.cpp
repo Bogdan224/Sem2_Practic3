@@ -22,6 +22,11 @@ int main() {
 	PrintList(head1);
 	printf("\n");
 	
+	while (head1!= NULL)
+	{
+		head1 = pop_front(head1);
+	}
+
 	my_list* head2 = NULL;
 	push(&head2, tv1);
 	push(&head2, tv2);
@@ -35,5 +40,10 @@ int main() {
 
 	PrintList(head2);
 	printf("\n");
+
+	while (head2 != NULL)
+	{
+		head2 = pop_front(head2);
+	}
 	return 0;
 }
