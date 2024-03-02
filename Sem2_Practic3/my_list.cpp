@@ -14,6 +14,7 @@ my_list* pop_front(my_list* head)
 		return NULL;
 	}
 	my_list* tmp = head->next;
+	free(head->tv);
 	free(head);
 	return tmp;
 }
@@ -64,6 +65,7 @@ my_list* pop(my_list* head, TV* tv) {
 			return h;
 		}
 		tmp->next = head->next;
+		free(head->tv);
 		free(head);
 	}
 	else {
